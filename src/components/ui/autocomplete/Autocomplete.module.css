@@ -1,0 +1,64 @@
+.autocomplete {
+  position: relative;
+}
+
+.results, .noMatch {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  right: 0;
+  z-index: 30;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  max-height: 268px;
+  overflow-y: auto;
+  background: var(--surface-hi);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  box-shadow: 0 12px 28px -12px var(--menu-shadow);
+}
+
+.option {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 11px 14px;
+  border-bottom: 1px solid var(--line-soft);
+  cursor: pointer;
+}
+
+.option:last-child {
+  border-bottom: 0;
+}
+
+.option[aria-selected='true'] {
+  background: var(--accent-soft);
+  box-shadow: inset 2px 0 0 var(--ink);
+}
+
+
+.optionLabel {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.optionDescription {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+
+.noMatch {
+  padding: 14px 15px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+
+.error {
+  margin: 8px 0 0;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--ink-2);
+}

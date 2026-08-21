@@ -1,0 +1,38 @@
+.panel {
+  background: var(--paper);
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  padding-top: var(--stack);
+}
+
+.head {
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--line);
+  position: relative;
+  z-index: 2;
+}
+
+.titleRow {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding-bottom: 14px;
+}
+
+.title {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 600;
+}
+
+@media (min-width: 620px) {
+  .title { font-size: 30px; }
+}
+
+@media (min-width: 880px) {
+  .head { padding-bottom: 20px; }
+  .title { font-size: 34px; }
+}

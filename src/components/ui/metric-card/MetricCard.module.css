@@ -1,0 +1,30 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 96px;
+  padding: 16px;
+  text-align: center;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.label {
+  font: var(--type-label);
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.value {
+  font: var(--type-value);
+}
+
+@media (min-width: 880px) {
+  .card {
+    min-height: 120px;
+    padding: 28px;
+  }
+}

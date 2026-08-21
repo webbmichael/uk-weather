@@ -1,0 +1,79 @@
+.day {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 12px 16px;
+  border: 0;
+  border-left: 2px solid transparent;
+  border-bottom: 1px solid var(--line-soft);
+  background: var(--paper);
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.day[aria-pressed='true'] {
+  background: var(--accent-soft);
+  border-left-color: var(--ink);
+}
+
+.name {
+  flex: none;
+  width: 88px;
+  font: var(--type-label);
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.icon {
+  flex: none;
+  width: 24px;
+  height: 24px;
+  color: var(--ink-2);
+}
+
+.condition {
+  flex: 1;
+}
+
+.temps {
+  display: flex;
+  flex: none;
+  align-items: baseline;
+  gap: 8px;
+  font: var(--type-value);
+}
+
+.low {
+  font-size: 14px;
+  color: var(--faint);
+}
+
+@media (min-width: 880px) {
+  .day {
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    padding: 24px 14px;
+    border-left: 0;
+    border-bottom: 2px solid transparent;
+    border-right: 1px solid var(--line-soft);
+    text-align: center;
+  }
+
+  .day[aria-pressed='true'] {
+    border-bottom-color: var(--ink);
+  }
+
+  .name,
+  .condition {
+    width: auto;
+    flex: none;
+  }
+
+  .icon {
+    width: 34px;
+    height: 34px;
+  }
+}
